@@ -1,0 +1,64 @@
+{
+    "aqil php": {
+        "prefix": "php",
+        "body": ["<?php",
+            "\t$1"
+            "?>"
+        ],
+    }
+    "aqil echo": {
+
+        "prefix": "ec",
+        "body": "echo \"${1:text}\" ;",
+
+    }
+    "aqil Fungsi": {
+        "scope": "php",
+        "prefix": "fung",
+        "body": "function ${1:nama_fungsi}(${2:\\$variable}) {\t${3:#code...};}",
+
+    }
+
+    "aqil Coment": {
+        "scope": "javascript,html, php",
+        "prefix": "comen",
+        "body": "$BLOCK_COMMENT_START ${1:placeholder} $BLOCK_COMMENT_END"
+    }
+
+    "aqil Input": {
+        "prefix": "inpul",
+        "body": [
+
+            "<p>",
+            "<label for=\"$1\"> ${2:Username}</label>",
+            "\t<input type=\"${3:text}\" name=\"$4\" value=\"$5\" id=\"$6\">",
+            "</p>",
+        ]
+    }
+
+
+
+    "aqil Form": {
+        "prefix": "formul",
+        "body": [
+            "<form action=\"${1:file.php}\" method=\"${2|GET,POST|}\">",
+            "\t<fieldset>",
+            "\t<legend >${3:judul}</legend>",
+            "\t$5",
+            "\t</fieldset>",
+
+            "</form>"
+        ],
+    }
+
+    "aqil label": {
+        "prefix": "fielku",
+        "body": [
+            "<fieldset>",
+            "<legend align=\"$1\">${2:username}</legend>",
+            "$3",
+            "</fieldset>"
+        ],
+    }
+
+}
